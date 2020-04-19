@@ -167,7 +167,7 @@ async function logTodoTitle() {
         var user = await fetchUser();
         if (user.id === 1) {
             var todo = await fetchTodo();
-            console.log(todo.title); // delectus aut autem
+            console.log(todo.title); 
         }
     } catch(error) {
         console.log("error");
@@ -175,3 +175,4 @@ async function logTodoTitle() {
   
 }
 ```
+참고 : https://joshua1988.github.io/web-development/javascript/js-async-await/
