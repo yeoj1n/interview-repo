@@ -235,9 +235,73 @@ Node.js에서의 사용 <br>
 - CPU의 낭비를 막기위해 불변함을 유지해야하고 이 불변함 유지를 하다보면 코드가 복잡해진다.
 -> **Immutable.js 사용의 이유!!**
 
-### CORS(Cross Origin Resource Sharing)
+### <b>CORS(Cross Origin Resource Sharing)</b>
 도메인 또는 포트가 다른 서버의 자원을 요청하는 매커니즘
 
 **Same Origin Policy(동일 출처 정책)**<br>
 내가 API 서버를 구축했는데 다른 웹 서비스에서 이 API를 마음대로 사용한다면?!?! <br>
 -> Javascript 는 동일 출처 정책(Same Origin Policy) 라는 정책을 두어 다른 도메인의 서버에 요청하는 것을 보안 문제로 간주하고 이를 차단한다.
+
+## <b>Prototype</b>
+Javascript : 프로토타입 기반 객체 지향 언어
+
+```
+/*
+    자바스크립트는 클래스라는 개념이 없음
+    기존의 객체를 복사해서 새로운 객체를 생성하는 프로토타입 기반의 언어
+*/  
+var objectLiteral = {};
+var objectConstructor = new Object(); 
+```
+
+**잘못된 객체 생성 예제**
+```
+function Person(){
+	this.hand = 2;
+	this.body = 1;
+	this.nose = 1;
+}
+
+var kim = new Person();
+var lee = new Person();
+console.log(kim.hand);
+console.log(lee.hand);
+```
+**올바른 객체 생성 예제**
+```
+
+```
+
+
+### <b>OOP(Object Oriented Programming)</b>
+1) 추상화 : 목적과 관련이 없는 부분을 제외하고 필요한 부분만을 포착한다.
+
+2) 캡슐화 : 외부에 노출할 필요가 없는 정보들을 은닉한다.
+3) 상속 : 부모 클래스가 자식 클래스에게 속성을 물려주는 것
+4) 다형성 : 형태가 같은데 다른 기능을 하는 것
+ex) 오버라이딩
+## <b>쿠키 vs 세션 vs 로컬 스토리지 vs 세션 스토리지</b>
+**쿠키** : 클라이언트 정보<br>
+- 4096bytes 이하의 저장공간
+- 서버측과 클라이언트측 양쪽에서 쿠키 데이터를 사용하는 
+api가 존재
+- 만료일 존재
+**웹 스토리지** (key-value 저장소)
+쿠키의 문제점을 보안한다 (HTTP 요청에 전달 X )
+1) 로컬 스토리지 : 클라이언트 정보를 영구적으로 보관
+ex) 자동 로그인 기능
+- 5MB의 공간을 허용
+- 로컬 환경에서만 컨트롤
+2) 세션 스토리지 : 세션 종료(브라우저 종료) 시 
+ex) 일회성 로그인 정보
+클라이언트 정보 삭제
+
+## <b>웹 컴포넌트</b>
+구성요소
+- 템플릿(Templates)
+- 데코레이터(Decorators)
+- 커스텀 엘리먼트(Custom Element)
+- 섀도 DOM(Shadow DOM)
+
+참고자료: https://d2.naver.com/helloworld/188655
+
