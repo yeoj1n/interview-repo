@@ -245,6 +245,8 @@ Node.js에서의 사용 <br>
 ## <b>Prototype</b>
 Javascript : 프로토타입 기반 객체 지향 언어
 
+자바스크립트의 객체는 Prototype 이라는 내부 프로퍼티가 존재한다.
+
 ```
 /*
     자바스크립트는 클래스라는 개념이 없음
@@ -264,12 +266,17 @@ function Person(){
 
 var kim = new Person();
 var lee = new Person();
-console.log(kim.hand);
-console.log(lee.hand);
 ```
 **올바른 객체 생성 예제**
 ```
+function Person(){}
 
+Person.prototype.hand = 2;
+Person.prototype.body = 1;
+Person.prototype.nose = 1;
+
+let kim = new Person();
+let lee = new Person();
 ```
 
 
@@ -285,7 +292,8 @@ ex) 오버라이딩
 - 4096bytes 이하의 저장공간
 - 서버측과 클라이언트측 양쪽에서 쿠키 데이터를 사용하는 
 api가 존재
-- 만료일 존재
+- 만료일 존재<br>
+
 **웹 스토리지** (key-value 저장소)
 쿠키의 문제점을 보안한다 (HTTP 요청에 전달 X )
 1) 로컬 스토리지 : 클라이언트 정보를 영구적으로 보관
@@ -301,7 +309,8 @@ ex) 일회성 로그인 정보
 - 템플릿(Templates)
 - 데코레이터(Decorators)
 - 커스텀 엘리먼트(Custom Element)
-- 섀도 DOM(Shadow DOM)
+- 섀도우 DOM(Shadow DOM)
 
 참고자료: https://d2.naver.com/helloworld/188655
 
+## <b>웹 컴포넌트</b>
