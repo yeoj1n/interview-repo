@@ -313,4 +313,16 @@ ex) 일회성 로그인 정보
 
 참고자료: https://d2.naver.com/helloworld/188655
 
-## <b>웹 컴포넌트</b>
+## <b>javascript slice splice split </b>
+### 1) slice : 기존 배열이 변하지 않는다.
+### 2) splice : 기존 배열이 변한다.
+### 3) split : delimeter를 기준으로 잘라 배열을 만든다.
+
+```
+var arr = [1,2,3,4,5]
+var str = "hello javascript"
+
+var a = arr.slice(0,2)// [1,2]
+var b = arr.splice(0,2)// [1,2]
+var c = str.split(" ")// ['hello', 'javascript']
+```
