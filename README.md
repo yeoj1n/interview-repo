@@ -1,10 +1,10 @@
 # interview-repo
 
-## <b>호이스팅</b>
+## **호이스팅**
 함수 안에 필요한 변수값을 전부 모아 유효 범위의 최상단에 선언하는 것
 Javascript Parser가 함수 실행 전 해당 함수를 한 번 훑는다.
 
-## <b>클로저</b>
+## **클로저**
 내부함수는 외부함수의 지역변수에 접근 할 수 있는데 외부함수의 실행이 끝나 외부함수가 소멸된 이후에도 내부함수가 외부함수의 변수에 접근할 수 있다. 이러한 메커니즘을 클로저라한다.
 
 
@@ -36,7 +36,7 @@ console.log(add()) // 2
 cosnole.log(add()) // 3
 
 ```
-## <b>비동기 처리</b>
+## **비동기 처리**
 특정 코드의 연산이 끝날 때까지 코드의 실행을 멈추지 않고 다음 코드를 먼저 실행하는 것 (JS의 특징)
 
 ### 비동기 방식의 문제점
@@ -84,14 +84,14 @@ console.log("hello3");
 ```
 
 
-## <b>Promise</b>
+## **Promise**
 비동기 처리에 사용되는 객체
 
-### <b>Promise 3가지 상태
+### **Promise 3가지 상태
 1) Pending : 대기상태
 2) Fulfilled : 완료
 3) Rejected : 실패
-</b>
+**
 
 - callback 방식
 ```
@@ -135,7 +135,7 @@ getData().then(function(data) {
 })
 ```
 
-## <b>Async & Await</b>
+## **Async & Await**
 콜백, 프로미스의 단점을 보완한 비동기 처리 패턴 중 하나
 
 - 사용방법
@@ -177,16 +177,16 @@ async function logTodoTitle() {
 ```
 참고 : https://joshua1988.github.io/web-development/javascript/js-async-await/
 
-## <b>AJAX(Asynchronous Javascript And Xml)</b>
+## **AJAX(Asynchronous Javascript And Xml)**
 브라우저가 가진 XMLHttpRequest 객체를 이용하여 페이지의 일부만을 위한 데이터를 로드하는 기법 (웹페이지 리로드 X)
 
-<b>장점</b><br>
+**장점**<br>
 웹페이지의 속도향상<br>
 서버의 처리가 완료될 때까지 기다리지 않고 처리가 가능하다.<br>
 서버에서 Data만 전송하면 되므로 전체적인 코딩의 양이 줄어든다.<br>
 기존 웹에서는 불가능했던 다양한 UI를 가능하게 해준다. ( Flickr의 경우, 사진의 제목이나 태그를 페이지의 리로드 없이 수정할 수 있다.)<br>
 
-<b>단점</b><br>
+**단점**<br>
 히스토리 관리가 되지 않는다.<br>
 페이지 이동없는 통신으로 인한 보안상의 문제가 있다.<br>
 연속으로 데이터를 요청하면 서버 부하가 증가할 수 있다.<br>
@@ -198,7 +198,7 @@ HTTP 클라이언트의 기능이 한정되어 있다.<br>
 Script로 작성되므로 디버깅이 용이하지 않다.<br>
 동일-출처 정책으로 인하여 다른 도메인과는 통신이 불가능하다. <br>(Cross-Domain문제)
 
-## <b>Axios</b>
+## **Axios**
 Promise 기반으로 async/await 문법을 사용하여 XHR 요청을 할 수 있다.
 
 **fetch 와 비교하여 좋은 점** <br>
@@ -209,11 +209,11 @@ CSRF 보호 기능 내장 <br>
 JSON 데이터 자동변환 <br>
 Node.js에서의 사용 <br>
 
-## <b>정적타입언어</b>
+## **정적타입언어**
 종류 : C, C++, JAVA 
 컴파일 시 자료형을 정한다. (타입 안전성)
 
-## <b>동적타입언어(인터프리터)</b>
+## **동적타입언어(인터프리터)**
 종류 : Javascript, Ruby, Python 
 실행 시 자료형을 정한다. (타입 에러 날 가능성이 있음)
 
@@ -235,14 +235,14 @@ Node.js에서의 사용 <br>
 - CPU의 낭비를 막기위해 불변함을 유지해야하고 이 불변함 유지를 하다보면 코드가 복잡해진다.
 -> **Immutable.js 사용의 이유!!**
 
-### <b>CORS(Cross Origin Resource Sharing)</b>
+### **CORS(Cross Origin Resource Sharing)**
 도메인 또는 포트가 다른 서버의 자원을 요청하는 매커니즘
 
 **Same Origin Policy(동일 출처 정책)**<br>
 내가 API 서버를 구축했는데 다른 웹 서비스에서 이 API를 마음대로 사용한다면?!?! <br>
 -> Javascript 는 동일 출처 정책(Same Origin Policy) 라는 정책을 두어 다른 도메인의 서버에 요청하는 것을 보안 문제로 간주하고 이를 차단한다.
 
-## <b>Prototype</b>
+## **Prototype**
 Javascript : 프로토타입 기반 객체 지향 언어
 
 자바스크립트의 객체는 Prototype 이라는 내부 프로퍼티가 존재한다.
@@ -280,14 +280,14 @@ let lee = new Person();
 ```
 
 
-### <b>OOP(Object Oriented Programming)</b>
+### **OOP(Object Oriented Programming)**
 1) 추상화 : 목적과 관련이 없는 부분을 제외하고 필요한 부분만을 포착한다.
 
 2) 캡슐화 : 외부에 노출할 필요가 없는 정보들을 은닉한다.
 3) 상속 : 부모 클래스가 자식 클래스에게 속성을 물려주는 것
 4) 다형성 : 형태가 같은데 다른 기능을 하는 것
 ex) 오버라이딩
-## <b>쿠키 vs 세션 vs 로컬 스토리지 vs 세션 스토리지</b>
+## **쿠키 vs 세션 vs 로컬 스토리지 vs 세션 스토리지**
 **쿠키** : 클라이언트 정보<br>
 - 4096bytes 이하의 저장공간
 - 서버측과 클라이언트측 양쪽에서 쿠키 데이터를 사용하는 
@@ -304,7 +304,7 @@ ex) 자동 로그인 기능
 ex) 일회성 로그인 정보
 클라이언트 정보 삭제
 
-## <b>웹 컴포넌트</b>
+## **웹 컴포넌트**
 구성요소
 - 템플릿(Templates)
 - 데코레이터(Decorators)
@@ -313,7 +313,7 @@ ex) 일회성 로그인 정보
 
 참고자료: https://d2.naver.com/helloworld/188655
 
-## <b>javascript slice splice split </b>
+## **javascript slice splice split **
 ### 1) slice : 기존 배열이 변하지 않는다.
 ### 2) splice : 기존 배열이 변한다.
 ### 3) split : delimeter를 기준으로 잘라 배열을 만든다.
@@ -326,7 +326,7 @@ var a = arr.slice(0,2)// [1,2]
 var b = arr.splice(0,2)// [1,2]
 var c = str.split(" ")// ['hello', 'javascript']
 ```
-## <b>웹 표준</b>
+## **웹 표준**
 웹에서 표준적으로 사용되는 기술이나 규칙
 ### 웹표준을 지켰을 때의 장점
 1) 소스의 통일화로 수정, 운영관리가 용이하다.<br/>
@@ -338,8 +338,23 @@ var c = str.split(" ")// ['hello', 'javascript']
 5) CSS와 HTML 문서 분리를 통해 페이지 로딩속도 향상과 같은 효율적 마크업이 가능하다.
 6) 다양한 브라우저에서의 호환이 가능하다.
 
-## <b>SEO(검색엔진최적화) - 웹페이지 로딩속도를 개선하는 방법</b>
+## **SEO(검색엔진최적화) - 웹페이지 로딩속도를 개선하는 방법**
 1)css, js 외부파일로 활용
 2)과도한 이미지 자제
 3)Img, js 압축
 4)gzip을 사용하여 파일, 데이터를 압축
+
+** **Flash of Unstyled Content(링크 사라짐)**
+브라우저로 웹문서에 접근했을때, 미처 CSS의 스타일이 모두 적용되지 못한 상태에서 화면이 표시되어 발생하는 화면 깜박임, 스타일의 적용 전과 적용 후가 그대로 화면에 노출된 상태로 변경되는 현상
+
+## **IIFE(Immediately Invoked Function Expression):즉시 실행되는 함수 표현식)**
+
+```
+(function temp() {
+    
+})
+```
+## **WEB Server와 WAS**
+Web Server : 정적인 컨텐츠 제공
+WAS : 동적인 컨텐츠 제공
+
