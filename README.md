@@ -358,3 +358,7 @@ var c = str.split(" ")// ['hello', 'javascript']
 Web Server : 정적인 컨텐츠 제공
 WAS : 동적인 컨텐츠 제공
 
+## **MVC구조**
+Model : 내부 비지니스 로직 처리
+View : 화면에 보여주기 위한 역할
+Controller : 화면의 로직 처리
