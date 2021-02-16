@@ -16,7 +16,7 @@ function outter() {
     function inner() {
         alert(title);
     }
-    inner();
+    return inner();
 }
 outer();
 ```
