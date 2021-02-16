@@ -10,7 +10,7 @@ Javascript Parser가 함수 실행 전 해당 함수를 한 번 훑는다.
 
 - 일반적으로 드는 클로저 예제
 ```
-function outter() {
+function outer() {
     var title = 'coding everybody';
 
     function inner() {
